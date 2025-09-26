@@ -53,6 +53,7 @@ voltmart-orders-cleaning/
 │   └── compare_results.py               # Checker script to validate equality
 │
 ├── README.md                            # Project overview and instructions
+├── requirements.txt                     # Python dependencies
 └── LICENSE                              # MIT License
 ```
 
